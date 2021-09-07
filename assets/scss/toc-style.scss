@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import '../scss/variable';
+html{
+    height:$height100;
+    body{
+        font-family: 'Manrope', sans-serif;
+        height: $height100;
+        background-color: $bg-primary;
+        color: $primary-text-color;
+    }
+}
+.toc-wrapper {
+    display: flex;
+    height: $height100;
+    .left-menu{
+        width:315px;
+        height: $height100;
+        background-color: $bg-white;
+        padding: 35px 35px 0;
+        position: relative;
+        .newgen-logo {
+            text-align: center;
+        }
+        .search-wrap{
+            margin: 25px 0 0;
+            position: relative;
+            .form-control{
+                background-color: $button-primary;
+                height: 32px;
+                box-shadow: inset 0px 3px 4px -3px rgba(0, 0, 0, 0.25);
+                border-radius: 18px;
+                font-size: 12px;
+                color: $primary-text-color;
+                border:none;
+                font-weight: map-get($font-weight, "semi-bold");
+                &::placeholder{
+                    opacity: 0.5;
+                }
+            }
+            .search-icon {
+                position: absolute;
+                top: 8px;
+                right: 15px;
+                line-height: 15px;
+                cursor: pointer;
+            }
+        }
+        .left-title-name-wrap{
+            border-bottom: 1px solid $button-primary;
+            margin: 25px 0 0;
+            h1{
+                font-weight: map-get($font-weight, "extra-bold" );
+                font-size: 16px;
+                line-height: 22px;
+                color: $secondary-text-color;
+                padding: 0 0 8px;
+                border-bottom:1px solid $button-primary;
+                margin: 0 0 20px;
+            }
+            .left-menu-left{
+                ul{
+                    padding: 0;
+                    list-style-type: none;
+                    margin: 0;
+                    li{
+                        margin: 0 0 20px;
+                        a{
+                            font-weight: map-get($font-weight, "medium" );
+                            font-size: 13px;
+                            line-height: 18px;
+                            display: inline-block;
+                            color: $primary-text-color;
+                            opacity: 0.6;
+                            text-decoration: none;
+                            position: relative;
+                            &:hover{
+                                opacity: 1;
+                            }
+                            &.failed{
+                                opacity: 1;
+                                &::after{
+                                    content: '';
+                                    height: 4px;
+                                    width: 70%;
+                                    background-color: $Highlight-color;
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: 0;
+                                }
+                            }
+                            &.passed{
+                                opacity: 1;
+                                &::after{
+                                    content: '';
+                                    height: 4px;
+                                    width: 70%;
+                                    background-color: $secondary-text-color;
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .devloped{
+            font-weight: map-get($font-weight, "semi-bold" );
+            font-size: 12px;
+            line-height: 16px;
+            position: absolute;
+            bottom: 0;
+            background: #fff;
+            width: 100%;
+            left: 0;
+            padding: 0 0 5px 15px;
+            span{
+                color: $Highlight-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .right-body{
+        width: calc(100% - 315px);
+        .pdf-export{
+            background-color: $bg-white;
+            width: 125px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            border-radius: 15px;
+            margin: 20px 25px 0 auto;
+            box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.1);
+            span{
+                font-weight: map-get($font-weight, "bold");
+                font-size: 12px;
+                line-height: 14px;
+                margin: 0 0 0 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .review-col {
+        background: $bg-white;
+        box-shadow: 0px 10px 23px -5px rgba(0,0,0,0.2);
+        border-radius: 14px;
+        h2{
+            font-weight: map-get($font-weight, 'bold');
+            font-size: 14px;
+            line-height: 19px;
+            border-bottom: 1px solid $button-primary;
+            margin: 0;
+            padding: 15px 25px;
+        }
+        .reivew-count-wrap{
+            padding: 0 15px 15px;
+            .inner-review-col{
+                h4{
+                    font-weight: map-get($font-weight,'bold');
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-align: center;
+                    margin: 0;
+                    padding: 6px 0;
+                    opacity: .6;
+                }
+                p{
+                    font-weight: map-get($font-weight,'bold');
+                    font-size: 24px;
+                    line-height: 33px;
+                    text-align: center;
+                }
+                .highlight{
+                    color: $Highlight-color;
+                }
+            }
+            .review-btn{
+                background-color: $button-primary;
+                border-color: $button-primary;
+                color: $button-text-color;
+                border-radius: 18px;
+                height: 25px;
+                padding: 0;
+                width: 70px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px 0 0 auto;
+            }
+        }
+    }
+}
