@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import '../scss/variable';
+@import '../scss/mixins';
 html{
     height:$height100;
     body{
@@ -17,7 +18,7 @@ html{
         height: $height100;
         background-color: $bg-white;
         padding: 35px 35px 0;
-        position: relative;
+        position: fixed;
         .newgen-logo {
             text-align: center;
         }
@@ -79,25 +80,13 @@ html{
                             &.failed{
                                 opacity: 1;
                                 &::after{
-                                    content: '';
-                                    height: 4px;
-                                    width: 70%;
-                                    background-color: $Highlight-color;
-                                    position: absolute;
-                                    bottom: -5px;
-                                    left: 0;
+                                    @include failedAfter;
                                 }
                             }
                             &.passed{
                                 opacity: 1;
                                 &::after{
-                                    content: '';
-                                    height: 4px;
-                                    width: 70%;
-                                    background-color: $secondary-text-color;
-                                    position: absolute;
-                                    bottom: -5px;
-                                    left: 0;
+                                    @include passedAfter;
                                 }
                             }
                         }
@@ -123,6 +112,20 @@ html{
     }
     .right-body{
         width: calc(100% - 315px);
+        margin-left: 315px;
+        .section-head {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 25px;
+            position: relative;
+            margin: 0 0 40px 27px;
+            display: inline-block;
+            &.failed{
+                &::after{
+                    @include failedAfter;
+                }
+            }
+        }
         .pdf-export{
             background-color: $bg-white;
             width: 125px;
@@ -146,6 +149,8 @@ html{
         background: $bg-white;
         box-shadow: 0px 10px 23px -5px rgba(0,0,0,0.2);
         border-radius: 14px;
+        width: 270PX;
+        margin: 0 auto;
         h2{
             font-weight: map-get($font-weight, 'bold');
             font-size: 14px;
@@ -190,6 +195,84 @@ html{
                 justify-content: center;
                 margin: 10px 0 0 auto;
             }
+        }
+    }
+    .table-section-head{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        padding: 0 0 25px 27px;
+    }
+    #summary-second {
+        padding: 18px 0 0;
+        margin: 40px 30px 0;
+        border-top: 1px solid $bg-border;
+        .table-section-head{
+            padding-left: 0;
+        }
+    }
+    .dataTables_wrapper{
+        .table{
+            margin: 0 !important;
+            background-color: $bg-white;
+            border: 2px solid $button-primary;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            thead{
+                box-shadow: 0px 6px 17px -7px rgba(0,0,0,0.3);
+                th{
+                    font-size: 13px;
+                    border: none;
+                    &:first-child,
+                    &:last-child{
+                        text-align: center;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    &:last-child{
+                        td{
+                            border-bottom: none;
+                        }
+                    }
+                }
+                td{
+                    font-size: 12px;
+                    border: none;
+                    padding: 5px 10px;
+                    vertical-align: middle;
+                    border-bottom: 1px solid $button-primary;
+                    &:first-child,
+                    &:last-child{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-size: 12px;
+        }
+        .dataTables_info {
+            margin: 0 15px 0 0;
+            padding:0;
+        }
+        .dataTables_length{
+            margin: 0 15px 0 0;
+            label{
+              margin:0;
+            }
+            select{
+                width: 40px;
+                display: inline-block;
+                padding: 0 0 0 3px;
+                height: 25px;
+                font-size: 12px;
+            }
+           
         }
     }
 }

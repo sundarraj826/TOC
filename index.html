@@ -7,7 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link href="assets/css/toc-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap4.min.css" />
+    <link href="./assets/css/toc-style.css" rel="stylesheet">
     <title>TOC</title>
   </head>
   <body>
@@ -15,12 +16,12 @@
       <section class="left-menu">
          <div class="newgen-logo">
             <a href="javascript:void(0);">
-               <img src="/assets/images/NewgenLogo.svg" alt="Newgen Logo">
+               <img src="./assets/images/NewgenLogo.svg" alt="Newgen Logo">
             </a>
          </div>
          <div class="search-wrap">
             <input type="text" class="form-control" placeholder="Search by ISBN">
-            <div class="search-icon"><img src="/assets/images/SearchIcon.svg" alt="Search Icon" class="img-fluid"></div>
+            <div class="search-icon"><img src="./assets/images/SearchIcon.svg" alt="Search Icon" class="img-fluid"></div>
          </div>
          <div class="left-title-name-wrap">
             <h1>Title Name Here</h1>
@@ -49,79 +50,134 @@
       </section>
       <div class="right-body">
          <div class="pdf-export">
-            <img src="/assets/images/pdf.png" alt="pdf" class="img-fluid">
+            <img src="../assets/images/pdf.png" alt="pdf" class="img-fluid">
             <span>pdf export</span>
          </div>
          <div class="right-section-wrap">
-            <section id="first-section" class="section">
-               <div class="section-head">Summary</div>
-               <div class="review-col-wrap">
-                 <div class="container">
-                 <div class="row">
-                   <div class="col-sm-4">
-                    <div class="review-col">
-                      <h2>Body Text Titles vs FM Titles</h2>
-                      <div class="reivew-count-wrap">
-                         <div class="inner-review-col">
-                            <div class="row">
-                              <div class="col">
-                                 <h4>Total</h4>
-                                 <p>98</p>
-                              </div>
-                              <div class="col">
-                                <h4>No.of Mismatches</h4>
-                                <p class="highlight">42</p>
-                             </div>
+            <section id="first-section" class="table-right-section">
+               <div id="summary-first" class="sum-section">
+                  <div class="section-head failed">Summary</div>
+                  <div class="review-col-wrap">
+                    <div class="container">
+                    <div class="row">
+                      <div class="col-sm-4">
+                       <div class="review-col">
+                         <h2>Body Text Titles vs FM Titles</h2>
+                         <div class="reivew-count-wrap">
+                            <div class="inner-review-col">
+                               <div class="row">
+                                 <div class="col-sm-4">
+                                    <h4>Total</h4>
+                                    <p>98</p>
+                                 </div>
+                                 <div class="col-sm-8">
+                                   <h4>No.of Mismatches</h4>
+                                   <p class="highlight">42</p>
+                                </div>
+                               </div>
                             </div>
+                            <div class="btn btn-primary review-btn">Review</div>
                          </div>
-                         <div class="btn btn-primary review-btn">Review</div>
+                       </div>
+                      </div>
+                      <div class="col-sm-4">
+                       <div class="review-col">
+                         <h2>Running Head Mismatch</h2>
+                         <div class="reivew-count-wrap">
+                            <div class="inner-review-col">
+                               <div class="row">
+                                 <div class="col-sm-4">
+                                    <h4>Total</h4>
+                                    <p>98</p>
+                                 </div>
+                                 <div class="col-sm-8">
+                                   <h4>No.of Mismatches</h4>
+                                   <p class="highlight">42</p>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="btn btn-primary review-btn">Review</div>
+                         </div>
+                       </div>
+                      </div>
+                      <div class="col-sm-4">
+                       <div class="review-col">
+                         <h2>Body Text Titles vs FM Titles</h2>
+                         <div class="reivew-count-wrap">
+                            <div class="inner-review-col">
+                               <div class="row">
+                                 <div class="col-sm-4">
+                                    <h4>Total</h4>
+                                    <p>98</p>
+                                 </div>
+                                 <div class="col-sm-8">
+                                   <h4>No.of Mismatches</h4>
+                                   <p class="highlight">42</p>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="btn btn-primary review-btn">Review</div>
+                         </div>
+                       </div>
                       </div>
                     </div>
                    </div>
-                   <div class="col-sm-4">
-                    <div class="review-col">
-                      <h2>Running Head Mismatch</h2>
-                      <div class="reivew-count-wrap">
-                         <div class="inner-review-col">
-                            <div class="row">
-                              <div class="col">
-                                 <h4>Total</h4>
-                                 <p>98</p>
-                              </div>
-                              <div class="col">
-                                <h4>No.of Mismatches</h4>
-                                <p class="highlight">42</p>
-                             </div>
-                            </div>
-                         </div>
-                         <div class="btn btn-primary review-btn">Review</div>
-                      </div>
-                    </div>
-                   </div>
-                   <div class="col-sm-4">
-                    <div class="review-col">
-                      <h2>Body Text Titles vs FM Titles</h2>
-                      <div class="reivew-count-wrap">
-                         <div class="inner-review-col">
-                            <div class="row">
-                              <div class="col">
-                                 <h4>Total</h4>
-                                 <p>98</p>
-                              </div>
-                              <div class="col">
-                                <h4>No.of Mismatches</h4>
-                                <p class="highlight">42</p>
-                             </div>
-                            </div>
-                         </div>
-                         <div class="btn btn-primary review-btn">Review</div>
-                      </div>
-                    </div>
-                   </div>
-                 </div>
-                </div>
+                  </div>
+               </div>
+               <div id="summary-second" class="sum-section">
+                  <div class="table-section-head">Body Text Titles vs FM Title</div>
+                  <table id="example" class="table table-bordered" style="width:100%">
+                     <thead>
+                         <tr>
+                             <th>#</th>
+                             <th>Body Text Titles</th>
+                             <th>FM Titles</th>
+                             <th>ID</th>
+                             <th>Status</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Introduction: The Book</td>
+                            <td>Introduction: The Book</td>
+                            <td>oso-9876543212-chapter-1</td>
+                            <td><div class="delete-button"><img src="./assets/images/CrossOut.svg" alt="delete"></div></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Historical Background: Towards A Human Resources Treaty for Disabled People</td>
+                            <td>Historical Background: Towards A Human Resources Treaty for Disabled People</td>
+                            <td>oso-9876543212-chapter-1</td>
+                            <td><div class="delete-button"><img src="./assets/images/CrossOut.svg" alt="delete"></div></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Introduction: The Book</td>
+                            <td>Introduction: The Book</td>
+                            <td>oso-9876543212-chapter-1</td>
+                            <td><div class="delete-button"><img src="./assets/images/CrossOut.svg" alt="delete"></div></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Historical Background: Towards A Human Resources Treaty for Disabled People</td>
+                            <td>Historical Background: Towards A Human Resources Treaty for Disabled People</td>
+                            <td>oso-9876543212-chapter-1</td>
+                            <td><div class="delete-button"><img src="./assets/images/CrossOut.svg" alt="delete"></div></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Introduction: The Book</td>
+                            <td>Introduction: The Book</td>
+                            <td>oso-9876543212-chapter-1</td>
+                            <td><div class="delete-button"><img src="./assets/images/CrossOut.svg" alt="delete"></div></td>
+                        </tr>
+                        
+                     </tbody>
+                 </table>
                </div>
             </section>
+           
          </div>
       </div>
     </div>
@@ -130,5 +186,8 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="./assets/js/toc-script.js"></script>
+   </body>
 </html>
