@@ -1,13 +1,13 @@
 $(document).ready(function() {
-    $('#example').DataTable({
+    $('.table').DataTable({
         "searching": false,
         "pageLength": 10,
         "dom": '<"top">rt<"bottom"iflp>',
         "ordering": false,
         language: {
             paginate: {
-              next: '&#8594;', // or '→'
-              previous: '&#8592;'
+              next: '<img src="./assets/images/RightArrow.svg" />',
+              previous: '<img src="./assets/images/LeftArrow.svg" />',
             }
           },
           oLanguage: {
@@ -16,4 +16,24 @@ $(document).ready(function() {
          }
         
     });
-} );
+});
+
+//window onload menu highlight
+$(window).on('load', function(){
+  var hashTag = window.location.hash;
+  //alert(hashTag);
+  $('.page-ancher').removeClass('failed');
+  $('a.page-ancher[href="'+ hashTag +'"]').addClass('failed');
+});
+
+//summary menu active link
+$('.page-ancher').on('click', function(){
+  $('html, body').animate({
+    scrollTop: $( $(this).attr('href') ).offset().top
+}, 500);
+
+  $('.page-ancher').removeClass('failed');
+  $(this).addClass('failed');
+ 
+});
+
